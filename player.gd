@@ -28,3 +28,6 @@ func _physics_process(delta):
 		motion.y = 0
 
 	move_and_slide(motion)
+
+func player_sell():
+	pass
