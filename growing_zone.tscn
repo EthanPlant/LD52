@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://growing_zone.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
@@ -31,6 +31,18 @@ region = Rect2( 32, 0, 16, 16 )
 atlas = ExtResource( 3 )
 region = Rect2( 48, 0, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 16, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 32, 16, 16 )
+
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 3 )
 region = Rect2( 16, 16, 16, 16 )
@@ -48,6 +60,11 @@ animations = [ {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "carrotgrowing",
+"speed": 0.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "corngrowing",
 "speed": 0.0
 }, {
 "frames": [  ],
@@ -83,7 +100,11 @@ wait_time = 5.0
 [node name="carrot_grow_timer" type="Timer" parent="."]
 wait_time = 5.0
 
+[node name="corn_grow_timer" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
 [connection signal="timeout" from="onion_grow_timer" to="." method="_on_onion_grow_timer_timeout"]
 [connection signal="timeout" from="carrot_grow_timer" to="." method="_on_carrot_grow_timer_timeout"]
+[connection signal="timeout" from="corn_grow_timer" to="." method="_on_corn_grow_timer_timeout"]

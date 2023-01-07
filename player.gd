@@ -31,3 +31,6 @@ func _physics_process(delta):
 
 func player_sell():
 	pass
+
+func player_shop():
+	pass
