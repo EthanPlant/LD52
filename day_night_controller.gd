@@ -1,7 +1,7 @@
 extends StaticBody2D
 
-const LENGTH_OF_DAY = 30
-const LENGTH_OF_NIGHT = 30
+const LENGTH_OF_DAY = 15
+const LENGTH_OF_NIGHT = 15
 
 var state = "day"
 

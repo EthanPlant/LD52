@@ -1,6 +1,4 @@
-extends Node2D
-
-const WIN_COND = 5000
+extends Node
 
 var inventory_open = false
 
@@ -9,10 +7,7 @@ func _physics_process(delta):
 	$ui/day_label.text = (" Day " + str(Global.day))
 
 	if Global.day == 8:
-		if Global.total_coins >= WIN_COND:
-			print("You win!")
-		else:
-			print("You lost :(")
+		get_tree().change_scene("endscreen.tscn")
 
 func _input(event):
 	if event.is_action_pressed("inventory"):

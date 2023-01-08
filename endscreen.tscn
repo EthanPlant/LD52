@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://upheavtt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://endscreen.gd" type="Script" id=2]
+[ext_resource path="res://menu_background.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="endscreen" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 80, 35 )
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 319.0
+margin_bottom = 179.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.643137 )
+
+[node name="score_label" type="RichTextLabel" parent="."]
+margin_left = 1.0
+margin_top = 18.0
+margin_right = 319.0
+margin_bottom = 40.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "You Earned: 5000 Total coins!"
+
+[node name="win_loss_label" type="RichTextLabel" parent="."]
+margin_left = 14.0
+margin_top = 60.0
+margin_right = 332.0
+margin_bottom = 168.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Unforunately you didn't make enough money for the festival, better luck next time!"

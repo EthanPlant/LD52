@@ -1,5 +1,7 @@
 extends Node
 
+const WIN_COND = 4500
+
 var plant_selelected = 1
 var num_of_onions = 0
 var num_of_carrots = 0
