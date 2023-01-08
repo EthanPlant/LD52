@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://shop_menu.gd" type="Script" id=1]
 [ext_resource path="res://arrow.png" type="Texture" id=2]
 [ext_resource path="res://crops.png" type="Texture" id=3]
 [ext_resource path="res://coin.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 48, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -11,6 +15,11 @@ region = Rect2( 0, 32, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ SubResource( 7 ) ],
+"loop": true,
+"name": "cabbageseed",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 1 ) ],
 "loop": true,
 "name": "cornseed",
@@ -53,7 +62,7 @@ color = Color( 0.278431, 0.243137, 0.243137, 0.184314 )
 position = Vector2( 13, 12 )
 scale = Vector2( 1.25, 1.25 )
 frames = SubResource( 2 )
-animation = "cornseed"
+animation = "cabbageseed"
 
 [node name="lefticon" type="AnimatedSprite" parent="."]
 position = Vector2( 10, 24 )

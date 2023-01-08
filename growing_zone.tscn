@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://growing_zone.gd" type="Script" id=1]
 [ext_resource path="res://background.png" type="Texture" id=2]
@@ -18,6 +18,18 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 6, 6 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 48, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 3 )
@@ -57,6 +69,11 @@ region = Rect2( 48, 16, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "cabbagegrowing",
+"speed": 0.0
+}, {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "carrotgrowing",
@@ -103,8 +120,12 @@ wait_time = 5.0
 [node name="corn_grow_timer" type="Timer" parent="."]
 wait_time = 5.0
 
+[node name="cabbage_grow_timer" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
 [connection signal="timeout" from="onion_grow_timer" to="." method="_on_onion_grow_timer_timeout"]
 [connection signal="timeout" from="carrot_grow_timer" to="." method="_on_carrot_grow_timer_timeout"]
 [connection signal="timeout" from="corn_grow_timer" to="." method="_on_corn_grow_timer_timeout"]
+[connection signal="timeout" from="cabbage_grow_timer" to="." method="_on_cabbage_grow_timer_timeout"]

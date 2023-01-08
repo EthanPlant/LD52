@@ -18,6 +18,10 @@ func _on_Area2D_area_entered(area:Area2D):
 			plant_growing = true
 			$corn_grow_timer.start()
 			$plant.play("corngrowing")
+		if plant == 4:
+			plant_growing = true
+			$corn_grow_timer.start()
+			$plant.play("cabbagegrowing")
 	else:
 		print("Plant is already growing here")
 
@@ -51,6 +55,17 @@ func _on_corn_grow_timer_timeout():
 	elif corn_plant.frame == 1:
 		corn_plant.frame = 2
 		plant_grown = true
+
+		
+func _on_cabbage_grow_timer_timeout():
+	var cabbage_plant = $plant	
+	if cabbage_plant.frame == 0:
+		cabbage_plant.frame = 1
+		$corn_grow_timer.start()
+	elif cabbage_plant.frame == 1:
+		cabbage_plant.frame = 2
+		plant_grown = true
+
 		
 
 func _on_Area2D_input_event(viewport:Node, event:InputEvent, shape_idx:int):
@@ -62,11 +77,11 @@ func _on_Area2D_input_event(viewport:Node, event:InputEvent, shape_idx:int):
 				Global.num_of_onions += 1
 			elif plant == 3:
 				Global.num_of_corn += 1
+			elif plant == 4:
+				Global.num_of_cabbages += 1
 			plant_growing = false
 			plant_grown = false
 			$plant.play("none")
 
-		print("Number of carrots: " + str(Global.num_of_carrots))
-		print("Number of onions: " + str(Global.num_of_onions))
 
 

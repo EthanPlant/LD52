@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://shop.gd" type="Script" id=1]
 [ext_resource path="res://foreground.png" type="Texture" id=2]
 [ext_resource path="res://shopkeeper.png" type="Texture" id=3]
 [ext_resource path="res://shop_menu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://corn_seedpack.tscn" type="PackedScene" id=5]
+[ext_resource path="res://cabbage_seedpack.tscn" type="PackedScene" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -60,6 +61,10 @@ shape = SubResource( 6 )
 position = Vector2( -28, -49 )
 
 [node name="corn_seedpack" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 20, 3 )
+
+[node name="cabbage_seedpack" parent="." instance=ExtResource( 6 )]
 visible = false
 position = Vector2( 20, 3 )
 
