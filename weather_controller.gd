@@ -13,9 +13,11 @@ func _ready():
 func _on_Timer_timeout():
 	if current_weather == "none":
 		current_weather = "rain"
+		$AudioStreamPlayer.play()
 		$Timer.wait_time = rand_range(10, 30)
 	elif current_weather == "rain":
 		current_weather = "none"
+		$AudioStreamPlayer.stop()
 		$Timer.wait_time = rand_range(20, 60)
 	$Timer.start()
 

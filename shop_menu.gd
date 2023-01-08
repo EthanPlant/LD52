@@ -74,6 +74,7 @@ func swap_item_forward():
 
 func buy():
 	Global.coins -= price
+	$AudioStreamPlayer.play()
 	if item == 1:
 		corn_owned = true
 	elif item == 2:

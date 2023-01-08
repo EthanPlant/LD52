@@ -749,9 +749,6 @@ position = Vector2( 185, 56 )
 [node name="sell_zone" parent="area1" instance=ExtResource( 9 )]
 position = Vector2( 176, 152 )
 
-[node name="shop" parent="area1" instance=ExtResource( 11 )]
-position = Vector2( 224, 83 )
-
 [node name="chickens" type="StaticBody2D" parent="area1"]
 
 [node name="chicken" parent="area1/chickens" instance=ExtResource( 13 )]
@@ -775,14 +772,17 @@ position = Vector2( 85, 126 )
 [node name="chicken_pen" parent="area1" instance=ExtResource( 14 )]
 position = Vector2( 34, 117 )
 
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 275, 54 )
+
 [node name="carrot_seedpack" parent="." instance=ExtResource( 5 )]
 position = Vector2( 301, 52 )
 
 [node name="onion_seedpack" parent="." instance=ExtResource( 6 )]
 position = Vector2( 309, 78 )
 
-[node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 275, 54 )
+[node name="shop" parent="." instance=ExtResource( 11 )]
+position = Vector2( 224, 83 )
 
 [node name="weather_controller" parent="." instance=ExtResource( 15 )]
 position = Vector2( 2, 0 )

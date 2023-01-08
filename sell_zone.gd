@@ -14,6 +14,9 @@ func _on_Area2D_body_entered(body:Node):
 		var coins = Global.coins
 		var total_coins = Global.total_coins
 
+		if carrots > 0 or onions > 0 or corn > 0 or cabbages > 0:
+			$AudioStreamPlayer.play()
+
 		coins += carrots * carrot_value
 		coins += onions * onion_value
 		coins += corn * corn_value
@@ -23,7 +26,6 @@ func _on_Area2D_body_entered(body:Node):
 		total_coins += onions * onion_value
 		total_coins += corn * corn_value
 		total_coins += cabbages * cabbage_value
-
 
 		carrots = 0
 		onions = 0
@@ -36,3 +38,5 @@ func _on_Area2D_body_entered(body:Node):
 		Global.num_of_cabbages = cabbages
 		Global.coins = coins
 		Global.total_coins = total_coins
+
+		
