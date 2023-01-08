@@ -18,6 +18,8 @@ animations = [ {
 
 [sub_resource type="DynamicFont" id=9]
 size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="AtlasTexture" id=3]
@@ -34,6 +36,8 @@ animations = [ {
 
 [sub_resource type="DynamicFont" id=10]
 size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="AtlasTexture" id=5]
@@ -50,6 +54,8 @@ animations = [ {
 
 [sub_resource type="DynamicFont" id=11]
 size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="AtlasTexture" id=7]
@@ -66,6 +72,8 @@ animations = [ {
 
 [sub_resource type="DynamicFont" id=12]
 size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [node name="inventory_menu" type="StaticBody2D"]
@@ -83,12 +91,12 @@ scale = Vector2( 1.625, 1.625 )
 frames = SubResource( 2 )
 
 [node name="carrot_label" type="RichTextLabel" parent="."]
-margin_left = 36.0
+margin_left = 29.0
 margin_top = 8.0
-margin_right = 76.0
+margin_right = 88.0
 margin_bottom = 48.0
 custom_fonts/normal_font = SubResource( 9 )
-text = "0"
+text = " 0"
 
 [node name="onion_icon" type="AnimatedSprite" parent="."]
 position = Vector2( 21, 50 )
@@ -96,12 +104,12 @@ scale = Vector2( 1.6875, 1.6875 )
 frames = SubResource( 4 )
 
 [node name="onion_label" type="RichTextLabel" parent="."]
-margin_left = 36.0
+margin_left = 29.0
 margin_top = 39.0
-margin_right = 76.0
+margin_right = 88.0
 margin_bottom = 79.0
 custom_fonts/normal_font = SubResource( 10 )
-text = "0"
+text = " 0"
 
 [node name="corn_icon" type="AnimatedSprite" parent="."]
 position = Vector2( 17, 78 )
@@ -109,12 +117,12 @@ scale = Vector2( 1.65625, 1.65625 )
 frames = SubResource( 6 )
 
 [node name="corn_label" type="RichTextLabel" parent="."]
-margin_left = 36.0
+margin_left = 29.0
 margin_top = 66.0
-margin_right = 76.0
+margin_right = 88.0
 margin_bottom = 106.0
 custom_fonts/normal_font = SubResource( 11 )
-text = "0"
+text = " 0"
 
 [node name="cabbage_icon" type="AnimatedSprite" parent="."]
 position = Vector2( 19, 107 )
@@ -122,9 +130,9 @@ scale = Vector2( 1.75, 1.75 )
 frames = SubResource( 8 )
 
 [node name="cabbage_label" type="RichTextLabel" parent="."]
-margin_left = 36.0
+margin_left = 29.0
 margin_top = 96.0
-margin_right = 76.0
+margin_right = 88.0
 margin_bottom = 136.0
 custom_fonts/normal_font = SubResource( 12 )
-text = "0"
+text = " 0"

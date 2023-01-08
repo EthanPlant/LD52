@@ -21,7 +21,7 @@ func _physics_process(delta):
 	if self.visible == true:
 		if item == 1:
 			$icon.play("cornseed")
-			$pricelabel.text = str(corn_price)
+			$pricelabel.text = (" " + str(corn_price))
 			if Global.coins >= corn_price:
 				if not corn_owned:
 					$buycolour.color = GREEN
@@ -32,7 +32,7 @@ func _physics_process(delta):
 
 		elif item == 2:
 			$icon.play("cabbageseed")
-			$pricelabel.text = str(cabbage_price)
+			$pricelabel.text = (" " + str(cabbage_price))
 			if Global.coins >= cabbage_price:
 				if not cabbage_owned:
 					$buycolour.color = GREEN
