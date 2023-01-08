@@ -15,9 +15,11 @@ orbit_velocity_random = 0.0
 script = ExtResource( 2 )
 
 [node name="rain_colour" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.509804, 0.509804, 0.509804, 1 )
 
 [node name="rain" type="Particles2D" parent="."]
+visible = false
 position = Vector2( 163, -11 )
 amount = 300
 lifetime = 2.0

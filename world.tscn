@@ -673,121 +673,130 @@ font_data = ExtResource( 12 )
 [node name="world" type="Node2D"]
 script = ExtResource( 7 )
 
-[node name="background" type="TileMap" parent="."]
+[node name="area1" type="Area2D" parent="."]
+
+[node name="background" type="TileMap" parent="area1"]
 position = Vector2( 1, 0 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -2, -1073741822, 0, -1, 1, 0, -65536, 18, 0, -65535, 18, 0, -65534, 18, 0, -65533, 18, 0, -65532, 18, 0, -65531, 18, 0, -65530, 18, 0, -65529, 18, 0, -65528, 18, 0, -65527, 18, 0, -65526, 18, 0, -65525, 18, 0, -65524, 18, 0, -65523, 18, 0, -65522, 18, 0, -65521, 18, 0, -65520, 18, 0, -65519, 18, 0, -65518, 18, 0, -65517, 18, 0, -65516, 1, 0, -65515, 2, 0, 65534, 3, 0, 65535, 18, 0, 0, 18, 0, 1, 18, 0, 2, 18, 0, 3, 18, 0, 4, 18, 0, 5, 9, 0, 6, 10, 0, 7, 10, 0, 8, 10, 0, 9, 10, 0, 10, 10, 0, 11, 10, 0, 12, 11, 0, 13, 18, 0, 14, 18, 0, 15, 18, 0, 16, 18, 0, 17, 18, 0, 18, 18, 0, 19, 18, 0, 20, 18, 0, 21, 5, 0, 131070, 18, 0, 131071, 18, 0, 65536, 18, 0, 65537, 18, 0, 65538, 18, 0, 65539, 18, 0, 65540, 18, 0, 65541, 12, 0, 65542, 13, 0, 65543, 13, 0, 65544, 13, 0, 65545, 13, 0, 65546, 13, 0, 65547, 13, 0, 65548, 14, 0, 65549, 18, 0, 65550, 18, 0, 65551, 18, 0, 65552, 18, 0, 65553, 18, 0, 65554, 18, 0, 65555, 18, 0, 65556, 18, 0, 65557, 18, 0, 196606, 18, 0, 196607, 18, 0, 131072, 18, 0, 131073, 18, 0, 131074, 18, 0, 131075, 18, 0, 131076, 18, 0, 131077, 12, 0, 131078, 13, 0, 131079, 13, 0, 131080, 13, 0, 131081, 13, 0, 131082, 13, 0, 131083, 13, 0, 131084, 14, 0, 131085, 18, 0, 131086, 18, 0, 131087, 18, 0, 131088, 18, 0, 131089, 18, 0, 131090, 18, 0, 131091, 18, 0, 131092, 18, 0, 131093, 18, 0, 262142, 18, 0, 262143, 18, 0, 196608, 18, 0, 196609, 18, 0, 196610, 18, 0, 196611, 18, 0, 196612, 18, 0, 196613, 12, 0, 196614, 13, 0, 196615, 13, 0, 196616, 13, 0, 196617, 13, 0, 196618, 13, 0, 196619, 13, 0, 196620, 14, 0, 196621, 18, 0, 196622, 18, 0, 196623, 18, 0, 196624, 18, 0, 196625, 18, 0, 196626, 18, 0, 196627, 18, 0, 196628, 18, 0, 196629, 18, 0, 327678, 18, 0, 327679, 18, 0, 262144, 18, 0, 262145, 18, 0, 262146, 18, 0, 262147, 18, 0, 262148, 18, 0, 262149, 15, 0, 262150, 16, 0, 262151, 16, 0, 262152, 16, 0, 262153, 16, 0, 262154, 16, 0, 262155, 16, 0, 262156, 17, 0, 262157, 18, 0, 262158, 18, 0, 262159, 18, 0, 262160, 18, 0, 262161, 18, 0, 262162, 18, 0, 262163, 18, 0, 262164, 18, 0, 262165, 18, 0, 393214, 18, 0, 393215, 18, 0, 327680, 18, 0, 327681, 18, 0, 327682, 18, 0, 327683, 18, 0, 327684, 18, 0, 327685, 18, 0, 327686, 18, 0, 327687, 18, 0, 327688, 18, 0, 327689, 18, 0, 327690, 4, 0, 327691, 4, 0, 327692, 18, 0, 327693, 18, 0, 327694, 18, 0, 327695, 18, 0, 327696, 18, 0, 327697, 18, 0, 327698, 18, 0, 327699, 18, 0, 327700, 18, 0, 327701, 18, 0, 458750, 18, 0, 458751, 18, 0, 393216, 18, 0, 393217, 18, 0, 393218, 18, 0, 393219, 18, 0, 393220, 18, 0, 393221, 18, 0, 393222, 18, 0, 393223, 18, 0, 393224, 18, 0, 393225, 18, 0, 393226, 18, 0, 393227, 18, 0, 393228, 18, 0, 393229, 18, 0, 393230, 18, 0, 393231, 18, 0, 393232, 18, 0, 393233, 18, 0, 393234, 18, 0, 393235, 18, 0, 393236, 18, 0, 393237, 18, 0, 524286, 18, 0, 524287, 18, 0, 458752, 18, 0, 458753, 18, 0, 458754, 18, 0, 458755, 18, 0, 458756, 18, 0, 458757, 18, 0, 458758, 18, 0, 458759, 18, 0, 458760, 18, 0, 458761, 18, 0, 458762, 18, 0, 458763, 18, 0, 458764, 18, 0, 458765, 18, 0, 458766, 18, 0, 458767, 18, 0, 458768, 18, 0, 458769, 18, 0, 458770, 18, 0, 458771, 18, 0, 458772, 18, 0, 458773, 18, 0, 589822, 18, 0, 589823, 18, 0, 524288, 18, 0, 524289, 18, 0, 524290, 18, 0, 524291, 18, 0, 524292, 18, 0, 524293, 18, 0, 524294, 18, 0, 524295, 18, 0, 524296, 18, 0, 524297, 18, 0, 524298, 1610612752, 0, 524299, 1610612752, 0, 524300, 1610612752, 0, 524301, 1610612752, 0, 524302, 1610612752, 0, 524303, 1610612752, 0, 524304, 1610612752, 0, 524305, 1610612752, 0, 524306, 1610612752, 0, 524307, 1610612752, 0, 524308, 1610612751, 0, 524309, 18, 0, 655358, 18, 0, 655359, 18, 0, 589824, 18, 0, 589825, 18, 0, 589826, 18, 0, 589827, 18, 0, 589828, 18, 0, 589829, 18, 0, 589830, 18, 0, 589831, 18, 0, 589832, 18, 0, 589833, 18, 0, 589834, 13, 0, 589835, 13, 0, 589836, 13, 0, 589837, 13, 0, 589838, 13, 0, 589839, 13, 0, 589840, 13, 0, 589841, 13, 0, 589842, 13, 0, 589843, 13, 0, 589844, 14, 0, 589845, 18, 0, 720894, 18, 0, 720895, 18, 0, 655360, 18, 0, 655361, 18, 0, 655362, 18, 0, 655363, 18, 0, 655364, 18, 0, 655365, 18, 0, 655366, 18, 0, 655367, 18, 0, 655368, 18, 0, 655369, 18, 0, 655370, 16, 0, 655371, 16, 0, 655372, 16, 0, 655373, 16, 0, 655374, 16, 0, 655375, 16, 0, 655376, 16, 0, 655377, 16, 0, 655378, 16, 0, 655379, 16, 0, 655380, 17, 0, 655381, 18, 0, 786430, 3, 0, 786431, 18, 0, 720896, 18, 0, 720897, 18, 0, 720898, 18, 0, 720899, 18, 0, 720900, 18, 0, 720901, 18, 0, 720902, 18, 0, 720903, 18, 0, 720904, 18, 0, 720905, 18, 0, 720906, 18, 0, 720907, 18, 0, 720908, 18, 0, 720909, 18, 0, 720910, 18, 0, 720911, 18, 0, 720912, 18, 0, 720913, 18, 0, 720914, 18, 0, 720915, 18, 0, 720916, 18, 0, 720917, -1610612735, 0, 851966, 6, 0, 851967, 7, 0, 786432, 18, 0, 786433, 18, 0, 786434, 18, 0, 786435, 18, 0, 786436, 18, 0, 786437, 18, 0, 786438, 18, 0, 786439, 18, 0, 786440, 18, 0, 786441, 18, 0, 786442, 18, 0, 786443, 18, 0, 786444, 18, 0, 786445, 18, 0, 786446, 18, 0, 786447, 18, 0, 786448, 18, 0, 786449, 18, 0, 786450, 18, 0, 786451, 18, 0, 786452, -1073741821, 0, 786453, -1610612734, 0 )
 
-[node name="foreground" type="TileMap" parent="."]
+[node name="foreground" type="TileMap" parent="area1"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 2, -1610612727, 0, 65538, -1610612726, 0, 65552, -1610612729, 0, 65553, 1610612743, 0, 131074, -1610612725, 0, 131087, -1610612729, 0, 131088, -1610612730, 0, 131089, 1610612742, 0, 131090, 1610612743, 0, 196610, -1610612725, 0, 196623, 7, 0, 196624, 6, 0, 196625, 5, 0, 196626, 1610612742, 0, 196627, 1610612743, 0, 262146, -1610612725, 0, 262160, -1073741823, 0, 262161, 8, 0, 262162, 6, 0, 262163, 1610612740, 0, 327681, -1610612727, 0, 327682, -1610612725, 0, 327696, -1610612725, 0, 327697, 9, 0, 327698, 7, 0, 327699, -1073741817, 0, 393218, -1073741824, 0, 393219, 1610612747, 0, 393220, 1610612747, 0, 393221, 1610612747, 0, 393222, 1610612747, 0, 393223, 1610612747, 0, 393224, 1610612747, 0, 393225, -1073741812, 0, 393226, 11, 0, 393227, 11, 0, 393228, 11, 0, 393229, 11, 0, 393230, 11, 0, 393231, 11, 0, 393232, 1610612736, 0, 458761, -1073741813, 0, 458762, -1610612727, 0, 524297, -1073741813, 0, 589833, 1610612748, 0, 655368, -1610612727, 0, 655369, -1073741813, 0, 720905, -1073741814, 0, 786441, -1610612727, 0 )
 
-[node name="growing_zone" parent="." instance=ExtResource( 4 )]
+[node name="growing_zones" type="Node" parent="area1"]
+
+[node name="growing_zone" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 105, 24 )
 
-[node name="growing_zone2" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone2" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 121, 24 )
 
-[node name="growing_zone3" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone3" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 137, 24 )
 
-[node name="growing_zone4" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone4" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 153, 24 )
 
-[node name="growing_zone5" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone5" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 169, 24 )
 
-[node name="growing_zone6" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone6" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 185, 24 )
 
-[node name="growing_zone7" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone7" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 105, 40 )
 
-[node name="growing_zone8" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone8" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 121, 40 )
 
-[node name="growing_zone9" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone9" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 137, 40 )
 
-[node name="growing_zone10" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone10" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 153, 40 )
 
-[node name="growing_zone11" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone11" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 169, 40 )
 
-[node name="growing_zone12" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone12" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 185, 40 )
 
-[node name="growing_zone13" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone13" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 105, 56 )
 
-[node name="growing_zone14" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone14" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 121, 56 )
 
-[node name="growing_zone15" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone15" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 137, 56 )
 
-[node name="growing_zone16" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone16" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 153, 56 )
 
-[node name="growing_zone17" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone17" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 169, 56 )
 
-[node name="growing_zone18" parent="." instance=ExtResource( 4 )]
+[node name="growing_zone18" parent="area1/growing_zones" instance=ExtResource( 4 )]
 position = Vector2( 185, 56 )
+
+[node name="onion_seedpack" parent="area1" instance=ExtResource( 6 )]
+position = Vector2( 309, 78 )
+
+[node name="carrot_seedpack" parent="area1" instance=ExtResource( 5 )]
+position = Vector2( 301, 52 )
+
+[node name="sell_zone" parent="area1" instance=ExtResource( 9 )]
+position = Vector2( 176, 152 )
+
+[node name="shop" parent="area1" instance=ExtResource( 11 )]
+position = Vector2( 224, 83 )
+
+[node name="chicken_pen" parent="area1" instance=ExtResource( 14 )]
+position = Vector2( 34, 117 )
+
+[node name="chickens" type="Node" parent="area1"]
+
+[node name="chicken" parent="area1/chickens" instance=ExtResource( 13 )]
+position = Vector2( 92, 139 )
+
+[node name="chicken2" parent="area1/chickens" instance=ExtResource( 13 )]
+position = Vector2( 59, 147 )
+
+[node name="chicken3" parent="area1/chickens" instance=ExtResource( 13 )]
+position = Vector2( 77, 110 )
+
+[node name="chicken4" parent="area1/chickens" instance=ExtResource( 13 )]
+position = Vector2( 83, 159 )
+
+[node name="chicken5" parent="area1/chickens" instance=ExtResource( 13 )]
+position = Vector2( 106, 153 )
+
+[node name="chicken6" parent="area1/chickens" instance=ExtResource( 13 )]
+position = Vector2( 85, 126 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 275, 54 )
 
-[node name="onion_seedpack" parent="." instance=ExtResource( 6 )]
-position = Vector2( 309, 78 )
+[node name="weather_controller" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2, 0 )
 
-[node name="carrot_seedpack" parent="." instance=ExtResource( 5 )]
-position = Vector2( 301, 52 )
+[node name="ui" type="Area2D" parent="."]
 
-[node name="coin_icon" type="Sprite" parent="."]
+[node name="coin_icon" type="Sprite" parent="ui"]
 position = Vector2( 265, 9 )
 texture = ExtResource( 10 )
 
-[node name="coin_text" type="RichTextLabel" parent="."]
+[node name="coin_text" type="RichTextLabel" parent="ui"]
 margin_left = 268.0
 margin_right = 308.0
 margin_bottom = 40.0
 custom_fonts/normal_font = SubResource( 3 )
 text = " 0"
 
-[node name="shop" parent="." instance=ExtResource( 11 )]
-position = Vector2( 224, 83 )
-
-[node name="inventory" parent="." instance=ExtResource( 8 )]
+[node name="inventory" parent="ui" instance=ExtResource( 8 )]
 position = Vector2( 58, 31 )
-
-[node name="sell_zone" parent="." instance=ExtResource( 9 )]
-position = Vector2( 176, 152 )
-
-[node name="chicken" parent="." instance=ExtResource( 13 )]
-position = Vector2( 92, 139 )
-
-[node name="chicken2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 59, 147 )
-
-[node name="chicken3" parent="." instance=ExtResource( 13 )]
-position = Vector2( 77, 110 )
-
-[node name="chicken4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 83, 159 )
-
-[node name="chicken5" parent="." instance=ExtResource( 13 )]
-position = Vector2( 106, 153 )
-
-[node name="chicken6" parent="." instance=ExtResource( 13 )]
-position = Vector2( 85, 126 )
-
-[node name="chicken_pen" parent="." instance=ExtResource( 14 )]
-position = Vector2( 34, 117 )
-
-[node name="weather_controller" parent="." instance=ExtResource( 15 )]
