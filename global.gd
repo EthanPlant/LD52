@@ -8,6 +8,6 @@ var num_of_cabbages = 0
 
 var coins = 0
 var total_coins = 0
-var day = 7
+var day = 1
 
 var weather
