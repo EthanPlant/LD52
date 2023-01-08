@@ -5,7 +5,7 @@ const LOSE_STR = "Unforunately you didn't make enough money for the festival, be
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$score_label.text = (" You earned: " + str(Global.total_coins) + " total coins!")
+	$score_label.text = ("You earned: " + str(Global.total_coins) + " total coins!")
 	if Global.total_coins >= Global.WIN_COND:
 		$win_loss_label.text = WIN_STR
 	else:
