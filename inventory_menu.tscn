@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://crops.png" type="Texture" id=1]
+[ext_resource path="res://inventory_menu.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 32, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="inventory_menu" type="StaticBody2D"]
+visible = false
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 210.0
+margin_bottom = 133.0
+color = Color( 0.278431, 0.243137, 0.243137, 0.129412 )
+
+[node name="carrot_icon" type="AnimatedSprite" parent="."]
+position = Vector2( 22, 19 )
+scale = Vector2( 1.625, 1.625 )
+frames = SubResource( 2 )
+
+[node name="carrot_label" type="RichTextLabel" parent="."]
+margin_left = 37.0
+margin_top = 13.0
+margin_right = 77.0
+margin_bottom = 53.0
+text = "0"
+
+[node name="onion_icon" type="AnimatedSprite" parent="."]
+position = Vector2( 21, 50 )
+scale = Vector2( 1.6875, 1.6875 )
+frames = SubResource( 4 )
+
+[node name="onion_label" type="RichTextLabel" parent="."]
+margin_left = 36.0
+margin_top = 41.0
+margin_right = 76.0
+margin_bottom = 81.0
+text = "0"
+
+[node name="corn_icon" type="AnimatedSprite" parent="."]
+position = Vector2( 17, 78 )
+scale = Vector2( 1.65625, 1.65625 )
+frames = SubResource( 6 )
+
+[node name="corn_label" type="RichTextLabel" parent="."]
+margin_left = 36.0
+margin_top = 70.0
+margin_right = 76.0
+margin_bottom = 110.0
+text = "0"

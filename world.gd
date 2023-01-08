@@ -1,8 +1,16 @@
 extends Node2D
 
+var inventory_open = false
 
 func _physics_process(delta):
-	$carrot_text.text = ("= " + str(Global.num_of_carrots))
-	$onion_text.text = ("= " + str(Global.num_of_onions))
+	$coin_text.text = ("=" + str(Global.coins))
 
-	$coin_text.text = ("= " + str(Global.coins))
+func _input(event):
+	if event.is_action_pressed("inventory"):
+		print("Hi")
+		if inventory_open:
+			$inventory.visible = false
+			inventory_open = false
+		else:
+			$inventory.visible = true
+			inventory_open = true
