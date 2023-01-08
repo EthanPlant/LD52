@@ -4,6 +4,10 @@ func _ready():
 	$shop_menu.visible = false
 
 func _process(delta):
+	if Global.weather == "rain":
+		$shopkeeper.visible = false
+	elif Global.weather == "none":
+		$shopkeeper.visible = true
 	if $shop_menu.corn_owned:
 		$corn_seedpack.visible = true
 	if $shop_menu.cabbage_owned:
