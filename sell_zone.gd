@@ -12,11 +12,18 @@ func _on_Area2D_body_entered(body:Node):
 		var corn = Global.num_of_corn
 		var cabbages = Global.num_of_cabbages
 		var coins = Global.coins
+		var total_coins = Global.total_coins
 
 		coins += carrots * carrot_value
 		coins += onions * onion_value
 		coins += corn * corn_value
 		coins += cabbages * cabbage_value
+
+		total_coins += carrots * carrot_value
+		total_coins += onions * onion_value
+		total_coins += corn * corn_value
+		total_coins += cabbages * cabbage_value
+
 
 		carrots = 0
 		onions = 0
@@ -28,3 +35,4 @@ func _on_Area2D_body_entered(body:Node):
 		Global.num_of_corn = corn
 		Global.num_of_cabbages = cabbages
 		Global.coins = coins
+		Global.total_coins = total_coins
